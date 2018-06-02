@@ -6,7 +6,8 @@
 
 mkdir /srv/salt/
 git clone https://github.com/Orionx86/KVM-VFIO.git /srv/salt
-apt-get install -y salt-master salt-minion salt-cloud
+apt-get install -y salt-master salt-minion salt-cloud || yum install -y salt-master salt-minion salt-cloud
+
 cp /srv/salt/states/setup/files/file_roots.conf /etc/salt/master.d/file_roots.conf
 cp /srv/salt/states/setup/files/master.conf /etc/salt/minion.d/master.conf
 systemctl restart salt*
