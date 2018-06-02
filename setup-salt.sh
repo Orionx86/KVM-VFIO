@@ -11,7 +11,7 @@ apt-get install -y salt-master salt-minion salt-cloud || yum install -y salt-mas
 cp /srv/salt/states/setup/files/file_roots.conf /etc/salt/master.d/file_roots.conf
 cp /srv/salt/states/setup/files/master.conf /etc/salt/minion.d/master.conf
 systemctl restart salt*
-pause 3
+sleep 3
 echo "https://github.com/Orionx86/KVM-VFIO"
 echo "By Orionx86 - Help build this out"
 echo ""
