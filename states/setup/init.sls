@@ -1,6 +1,8 @@
-{% if grains['kernel'] == "Linux"%}
+{% if grains['osfullname'] == "Ubuntu"%}
 include:
-  - .install
-  - .services
-  - .kvm
+  - .ubuntu.repository
+  - .ubuntu.grub
+  - .ubuntu.install
+  - .ubuntu.services
+  - .ubuntu.kvm
 {% endif %}
