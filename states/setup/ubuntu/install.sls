@@ -10,6 +10,10 @@ Installs:
     - virt-manager
     - python-pip
     - libvirt-dev
+    - hugepages
+    - seabios
+    - qemu-utils
+    - ovmf
 
 libvirt-python:
   pip.installed
