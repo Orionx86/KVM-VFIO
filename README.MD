@@ -7,5 +7,5 @@ https://www.reddit.com/r/VFIO/
 
 # Setup - Run this to kick off the Install
 ```
-sudo sh https://git.io/vhWZt
+sudo curl https://raw.githubusercontent.com/Orionx86/KVM-VFIO/master/setup-salt.sh | bash
 ```
