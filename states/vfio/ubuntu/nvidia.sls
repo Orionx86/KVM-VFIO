@@ -39,23 +39,24 @@ touch this file:
 
 /etc/modprobe.d/blacklist.conf:
   file.append:
-    - context:
+    - text:
       - blacklist nouveau
       - blacklist lbm-nouveau
       - options nouveau modeset=0
       - alias nouveau off
       - alias lbm-nouveau off
 
-/etc/modprobe.d/kvm.conf
+/etc/modprobe.d/kvm.conf:
   file.append:
-    - context: options kvm ignore_msrs=1
+    - text:
+      - options kvm ignore_msrs=1
 
 /etc/sysctl.conf:
   file.append:
     - template: jinja
     - context:
       - vm.nr_hugepages = {{ grains['mem_total'] / 2  }}
-            
+
 Apply Configs:
   cmd.run:
     - names:
